@@ -13,3 +13,4 @@
 
 #### Useful Blogs
 - [ ] [Marc's Blog](http://brooker.co.za/blog/)
+- [ ] [Awesome Distributed Systems](https://github.com/theanalyst/awesome-distributed-systems)
