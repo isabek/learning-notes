@@ -8,3 +8,8 @@
 
 #### Distributed Systems
 - [x] [Learning to build distributed systems](http://brooker.co.za/blog/2019/04/03/learning.html)
+
+
+
+#### Useful Blogs
+- [] [Marc's Blog](http://brooker.co.za/blog/)
