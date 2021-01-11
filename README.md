@@ -12,4 +12,4 @@
 
 
 #### Useful Blogs
-- [] [Marc's Blog](http://brooker.co.za/blog/)
+- [ ] [Marc's Blog](http://brooker.co.za/blog/)
