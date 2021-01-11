@@ -14,3 +14,6 @@
 #### Useful Blogs
 - [ ] [Marc's Blog](http://brooker.co.za/blog/)
 - [ ] [Awesome Distributed Systems](https://github.com/theanalyst/awesome-distributed-systems)
+- [ ] [https://jvns.ca/blog/2016/04/09/some-of-my-favorite-blogs/](Julia Evans)
+- [ ] [Aphyr](https://aphyr.com/)
+- [ ] [The Pragmatic Engineer](https://blog.pragmaticengineer.com/)
