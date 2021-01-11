@@ -5,3 +5,6 @@
 
 #### Microservices
 - [x] [Introducing Domain-Oriented Microservice Architecture](https://eng.uber.com/microservice-architecture/) 
+
+#### Distributed Systems
+- [x] [Learning to build distributed systems](http://brooker.co.za/blog/2019/04/03/learning.html)
