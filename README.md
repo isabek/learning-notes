@@ -17,3 +17,4 @@
 - [ ] [Julia Evans](https://jvns.ca/blog/2016/04/09/some-of-my-favorite-blogs/)
 - [ ] [Aphyr](https://aphyr.com/)
 - [ ] [The Pragmatic Engineer](https://blog.pragmaticengineer.com/)
+- [ ] [thoughts from the red planet](http://nathanmarz.com/)
