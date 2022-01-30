@@ -3,6 +3,13 @@
 
 - [Introduction](#introduction)
 - [Overview](#overview)
+- [In a Cluster: Latency and Load](#in-a-cluster-latency-and-load)
+    - [Reducing Latency](#reducing-latency)
+- [In a Region: Replication](#in-a-region-replication)
+- [Across Regions: Consistency](#across-regions-consistency)
+- [Single Server Improvements](#single-server-improvements)
+- [Memcache Workload](#memcache-workload)
+- [Conclusion](#conclusion)
 
 ## Introduction
 
@@ -22,7 +29,7 @@ billions of requests per second.
 
 > Meta uses `memcached` to refer to the source code or a running binary and `memcache` to describe the distributes system.
 
-#### Query cache
+### Query cache
 
 Meta relies on `memcache` to ease the read loads on its databases. It uses `demand-filled look-aside` caching strategy.
 
@@ -30,7 +37,33 @@ When as web-server needs data, it first tries to fetch it from `memcache` by pro
 doesn't contain value for the requested key a web-server fetches data from DB and caches it to the `memcache`. For write
 requests, a web server sends a query to the DB and invalidates the cache.
 
-#### Generic cache
+### Generic cache
 
 Engineers use `memcache` to store pre-calculated results from sophisticated machine-learning algorithms which can then
-be used by a variety of other applications. 
+be used by a variety of other applications.
+
+## In a Cluster: Latency and Load
+
+When you have thousands of servers in a cluster you need to spend your effort on the following problems: reducing the
+latency of fetching cached data from `memcache` or reducing the load imposed due to cache miss.
+
+### Reducing Latency
+
+The latency of `memcache`'s response is a critical factor in the response time of a user's request. Sometimes loading
+one of the Meta's popular pages results in an average of 521 distinct items fetched from `memcache`.
+
+Meta maintains hundreds of `memcached` servers in a cluster in order to reduce load on databases and other services.
+Items are distributed across the `memcached` servers through consistent hashing. Thus web servers have to routinely
+communicate with many `memcached` servers to fulfill a user request. As a result, all web servers communicate with
+every `memcached` server is called an all-to-all connection. Aforementioned connection pattern can lead to the following
+problems: `TCP incast congestion` and allow a single server to become a bottleneck for many web servers. 
+
+## In a Region: Replication
+
+## Across Regions: Consistency
+
+## Single Server Improvements
+
+## Memcache Workload
+
+## Conclusion
